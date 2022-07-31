@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+.intro-wrap {
+  h2 {
+    font-size: 28px;
+  }
+  .text-wrap > p {
+    @include word-break-wrap();
+
+    font-size: 18px;
+  }
+}

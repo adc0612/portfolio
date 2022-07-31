@@ -1,0 +1,22 @@
+@charset "UTF-8";
+// mixin
+
+// icon 사이즈 설정 mixin
+@mixin icon($size: 24px) {
+  width: $size;
+  height: $size;
+  display: inline-block;
+}
+
+// CJK text wrap 설정 mixin
+@mixin word-break-wrap() {
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+
+// text ... 으로 숨김처리
+@mixin text-ellipsis() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
