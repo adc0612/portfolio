@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+.v-application {
+  line-height: normal;
+}
+.v-application p {
+  margin: 0;
+}
+.v-application ul,
+.v-application ol {
+  padding-left: 0;
+}
+@include desktop {
+  .container {
+    max-width: 900px;
+  }
+}

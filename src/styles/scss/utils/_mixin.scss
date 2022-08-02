@@ -1,6 +1,25 @@
 @charset "UTF-8";
 // mixin
 
+//display
+@mixin mobile {
+  @media (max-width: #{$breakpoint-mobile - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-tablet}) {
+    @content;
+  }
+}
+
 // icon 사이즈 설정 mixin
 @mixin icon($size: 24px) {
   width: $size;
