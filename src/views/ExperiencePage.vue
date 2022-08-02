@@ -1,5 +1,5 @@
 <template>
-  <v-card flat class="experice-wrap">
+  <v-card flat class="experience-wrap">
     <h2 class="primary--text">Exp</h2>
     <v-card v-for="(item, index) in experienceContents" :key="index" :class="{ 'mt-3': index > 0 }">
       <v-card-text class="px-8 py-4 contents-wrap">

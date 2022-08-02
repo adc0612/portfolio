@@ -6,6 +6,7 @@
       <v-container>
         <IntroPage />
         <ExperiencePage @openModal="openModal" />
+        <ProjectPage @openModal="openModal" />
       </v-container>
     </v-main>
     <DetailModal v-if="showModal" v-model="showModal" :data="modalData" @close="showModal = false" />
@@ -18,10 +19,12 @@ import NavMenu from './components/layout/NavMenu.vue';
 import IntroPage from './views/IntroPage.vue';
 import ExperiencePage from './views/ExperiencePage.vue';
 import DetailModal from '@/components/common/DetailModal';
+import ProjectPage from '@/views/ProjectPage';
 export default {
   name: 'App',
 
   components: {
+    ProjectPage,
     DetailModal,
     AppBar,
     NavMenu,
