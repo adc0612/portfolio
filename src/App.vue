@@ -5,6 +5,7 @@
     <v-main>
       <v-container>
         <IntroPage />
+        <ExperiencePage />
       </v-container>
     </v-main>
   </v-app>
@@ -14,6 +15,7 @@
 import AppBar from '@/components/layout/AppBar.vue';
 import NavMenu from './components/layout/NavMenu.vue';
 import IntroPage from './views/IntroPage.vue';
+import ExperiencePage from './views/ExperiencePage.vue';
 export default {
   name: 'App',
 
@@ -21,6 +23,7 @@ export default {
     AppBar,
     NavMenu,
     IntroPage,
+    ExperiencePage,
   },
 
   data: () => ({
