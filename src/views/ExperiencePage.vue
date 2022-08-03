@@ -1,16 +1,16 @@
 <template>
   <v-card flat class="experience-wrap">
     <h2 class="primary--text">Exp</h2>
-    <v-card v-for="(item, index) in experienceContents" :key="index" :class="{ 'mt-3': index > 0 }">
-      <v-card-text class="px-8 py-4 contents-wrap">
+    <v-card v-for="(item, index) in experienceContents" :key="index" :class="{ 'mt-3': index > 0, 'mt-4': index === 0 }">
+      <v-card-text class="px-8 contents-wrap">
         <div class="d-flex flex-column justify-center info-wrap">
           <h3>{{ item.name }}</h3>
-          <p>{{ item.role }}</p>
+          <p class="mt-2">{{ item.role }}</p>
           <p>{{ item.date }}</p>
         </div>
-        <ul class="work-list flex-grow-1">
-          <li v-for="(line, i) in item.work" :key="i">
-            <v-icon>mdi-check</v-icon>
+        <ul class="work-list flex-grow-1 d-flex flex-column justify-center">
+          <li v-for="(line, i) in item.work" :key="i" class="d-flex" :class="{ 'mt-2': i > 0 }">
+            <v-icon class="mr-2">mdi-briefcase-outline</v-icon>
             {{ line }}
           </li>
         </ul>
@@ -28,115 +28,61 @@ export default {
   data: () => ({
     experienceContents: [
       {
-        name: '이름',
+        name: '카이아이 컴퍼니',
         link: '',
-        role: '로1',
+        role: 'Frontend Developer',
         date: '2021.06 ~ current',
-        work: [
-          '프로필 이미지의 이상적인 사진 크기는 400픽셀x400픽셀입니다.',
-          '프로필 이미지의 이상적인 사진 크기는 400픽셀x400픽셀입니다.',
-          '프로필 이미지의 이상적인 사진 크기는 400픽셀x400픽셀입니다.',
-        ],
+        work: ['앱 웹뷰 구현 및 서비스 관리자 페이지 화면 구현 ', '기존 프로젝트 css에서 sass로 전환', '데이터 시각화를 위한 대시보드, 차트 기능 구현'],
         modalContents: {
-          title: '타이틀',
+          title: '카이아이 컴퍼니',
           sections: [
             {
-              subTitle: 'subtitle',
-              contents: [
-                '프로필 이미지의 이상적인 사진 크기는 400픽셀x400픽셀입니다.',
-                '프로필 이미지의 이상적인 사진 크기는 400픽셀x400픽셀입니다.',
-                '프로필 이미지의 이상적인 사진 크기는 400픽셀x400픽셀입니다.',
-                '프로필 이미지의 이상적인 사진 크기는 400픽셀x400픽셀입니다.',
-              ],
+              subTitle: '# What I Learned',
+              contents: ['vuex를 이용한 state 관리', 'vuetify와 sass를 이용한 UI구현', '컴포넌트 모듈화를 통한 재사용성 향상', '기획자, 백엔드 개발자, 디자이너와 협업'],
             },
             {
-              subTitle: 'subtitle',
-              contents: [
-                '프로필 이미지의 이상적인 사진 크기는 400픽셀x400픽셀입니다.',
-                '프로필 이미지의 이상적인 사진 크기는 400픽셀x400픽셀입니다.',
-                '프로필 이미지의 이상적인 사진 크기는 400픽셀x400픽셀입니다.',
-                '프로필 이미지의 이상적인 사진 크기는 400픽셀x400픽셀입니다.',
-              ],
-            },
-            {
-              subTitle: 'skill',
+              subTitle: '# Skill',
               contents: ['Vue', 'Vuex', 'Vuetify', 'Sass'],
             },
           ],
         },
       },
       {
-        name: '이름',
+        name: '칸타코리아',
         link: '',
-        role: '로',
-        date: '2020.02 ~ 2020.05',
-        work: [
-          '프로필 이미지의 이상적인 사진 크기는 400픽셀x400픽셀입니다.',
-          '프로필 이미지의 이상적인 사진 크기는 400픽셀x400픽셀입니다.',
-          '프로필 이미지의 이상적인 사진 크기는 400픽셀x400픽셀입니다.',
-        ],
+        role: 'Survey Programmer (CAWI)',
+        date: '2018.09 ~ 2020.09',
+        work: ['IBM Dimension Platform을 이용한 온라인 설문조사(CAWI) 구현 및 진행', '한국조사에 맞춘 UI 컴포넌트 개발', '프로젝트 코드 입력시 테스트 및 실제 조사 URL 생성 페이지 개발'],
         modalContents: {
-          title: '타이틀',
+          title: '칸타코리아',
           sections: [
             {
-              subTitle: 'subtitle',
-              contents: [
-                '프로필 이미지의 이상적인 사진 크기는 400픽셀x400픽셀입니다.',
-                '프로필 이미지의 이상적인 사진 크기는 400픽셀x400픽셀입니다.',
-                '프로필 이미지의 이상적인 사진 크기는 400픽셀x400픽셀입니다.',
-                '프로필 이미지의 이상적인 사진 크기는 400픽셀x400픽셀입니다.',
-              ],
+              subTitle: '# What I Learned',
+              contents: ['온라인 설문조사 개발부터 진행, 데이터 전달 경험', '크로스 브라우징 대응', '1년이상 진행하는 장기프로젝트를 담당하며 얻은 소통기술과 책임감'],
             },
             {
-              subTitle: 'subtitle',
-              contents: [
-                '프로필 이미지의 이상적인 사진 크기는 400픽셀x400픽셀입니다.',
-                '프로필 이미지의 이상적인 사진 크기는 400픽셀x400픽셀입니다.',
-                '프로필 이미지의 이상적인 사진 크기는 400픽셀x400픽셀입니다.',
-                '프로필 이미지의 이상적인 사진 크기는 400픽셀x400픽셀입니다.',
-              ],
-            },
-            {
-              subTitle: 'skill',
-              contents: ['Vue', 'Vuex', 'Vuetify', 'Sass'],
+              subTitle: '# Skill',
+              contents: ['Javascript', 'JQuery', 'Css', 'XHTML', 'Vue'],
             },
           ],
         },
       },
       {
-        name: '이름',
+        name: 'NTech Service (NHN Technology Service)',
         link: '',
-        role: '로',
-        date: '2020.02 ~ 2020.05',
-        work: [
-          '프로필 이미지의 이상적인 사진 크기는 400픽셀x400픽셀입니다.',
-          '프로필 이미지의 이상적인 사진 크기는 400픽셀x400픽셀입니다.',
-          '프로필 이미지의 이상적인 사진 크기는 400픽셀x400픽셀입니다.',
-        ],
+        role: '인턴',
+        date: '2018.02 ~ 2018.02',
+        work: ['UI개발팀 인턴으로 웹 교육과 매일 과제 수행', '디자인(psd 파일) 기반으로 웹 페이지 구현', '프로필 이미지의 이상적인 사진 크기는 400픽셀x400픽셀입니다.'],
         modalContents: {
-          title: '타이틀',
+          title: 'NTech Service(NHN Technology Service)',
           sections: [
             {
-              subTitle: 'subtitle',
-              contents: [
-                '프로필 이미지의 이상적인 사진 크기는 400픽셀x400픽셀입니다.',
-                '프로필 이미지의 이상적인 사진 크기는 400픽셀x400픽셀입니다.',
-                '프로필 이미지의 이상적인 사진 크기는 400픽셀x400픽셀입니다.',
-                '프로필 이미지의 이상적인 사진 크기는 400픽셀x400픽셀입니다.',
-              ],
+              subTitle: '# What I Learned',
+              contents: ['HTML, CSS, Javascript, Sass, Gulp 등 웹 전반적인 지식', '반응형, 크로스 브라우징, 접근성, 성능 개선을 고려한 개발'],
             },
             {
-              subTitle: 'subtitle',
-              contents: [
-                '프로필 이미지의 이상적인 사진 크기는 400픽셀x400픽셀입니다.',
-                '프로필 이미지의 이상적인 사진 크기는 400픽셀x400픽셀입니다.',
-                '프로필 이미지의 이상적인 사진 크기는 400픽셀x400픽셀입니다.',
-                '프로필 이미지의 이상적인 사진 크기는 400픽셀x400픽셀입니다.',
-              ],
-            },
-            {
-              subTitle: 'skill',
-              contents: ['Vue', 'Vuex', 'Vuetify', 'Sass'],
+              subTitle: '# Skill',
+              contents: ['Javascript', 'CSS', 'HTML'],
             },
           ],
         },

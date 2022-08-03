@@ -3,11 +3,16 @@
 .experience-wrap {
   h2 {
     font-size: 28px;
+    font-weight: 600;
   }
   .contents-wrap {
     display: flex;
     .info-wrap {
       width: 30%;
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+      }
     }
   }
   @include mobile {
