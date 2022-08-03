@@ -1,12 +1,33 @@
 @charset "UTF-8";
 
 .intro-wrap {
-  h2 {
-    font-size: 28px;
+  .intro-container {
+    display: flex;
+    align-items: center;
   }
-  .text-wrap > p {
-    @include word-break-wrap();
+  .text-wrap {
+    margin-left: 32px;
+    & > p {
+      @include word-break-wrap();
 
-    font-size: 18px;
+      font-size: 16px;
+      line-height: 1.5;
+      & > strong {
+        font-weight: 600;
+      }
+    }
+  }
+  @include mobile {
+    .intro-container {
+      display: block;
+    }
+    .profile-wrap {
+      display: flex;
+      justify-content: center;
+    }
+    .text-wrap {
+      margin-top: 16px;
+      margin-left: 0
+    }
   }
 }

@@ -1,20 +1,23 @@
 <template>
   <v-dialog v-model="show" max-width="500" transition="dialog-bottom-transition" overlay-color="rgba(0,0,0,0.7)" overlay-opacity="1">
     <v-card tile class="modal-wrap">
-      <v-card-title class="d-flex justify-space-between title-wrap">
-        {{ data.title }}
+      <v-card-title class="d-flex justify-space-between flex-nowrap title-wrap">
+        <p>{{ data.title }}</p>
         <v-btn width="48" height="48" icon @click="$emit('close')">
           <v-icon color="primary" size="28">mdi-close</v-icon>
         </v-btn>
       </v-card-title>
       <v-card-text>
+        <div v-if="data.imageName" class="mt-4">
+          <v-img :alt="`${data.imageName} project image`" :src="require(`@/assets/image/${data.imageName}`)" contain max-height="500px" />
+        </div>
         <div class="text-container mt-4" v-for="(section, index) in data.sections" :key="index">
           <h3 class="primary--text">{{ section.subTitle }}</h3>
           <div v-if="section.subTitle === '# Skill'" class="skill-list d-flex flex-wrap mt-4">
-            <SkillChip v-for="(item, i) in section.contents" :key="i" :name="item" />
+            <SkillChip v-for="(skill, i) in section.contents" :key="i" :name="skill" />
           </div>
           <ul v-else class="work-list flex-grow-1 pl-2 mt-4">
-            <li v-for="(line, i) in section.contents" :key="i" :class="{ 'mt-4': i === 0 }">
+            <li v-for="(line, i) in section.contents" :key="i" class="d-flex align-start" :class="{ 'mt-4': i === 0 }">
               <v-icon class="mr-2">mdi-pencil-outline</v-icon>
               {{ line }}
             </li>

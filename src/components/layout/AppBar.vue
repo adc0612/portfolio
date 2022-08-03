@@ -2,7 +2,7 @@
   <v-app-bar app color="primary" dark>
     <div class="d-flex align-center">
       <v-app-bar-nav-icon @click.stop="handleDrawer" class="d-sm-none" />
-      <!-- <h1>Dohu Jeon</h1> -->
+      <h1>Dohu Jeon</h1>
     </div>
     <v-spacer></v-spacer>
     <v-btn href="https://github.com/vuetifyjs/vuetify/releases/latest" target="_blank" text>

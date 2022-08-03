@@ -1,13 +1,15 @@
 <template>
-  <v-card flat class="experience-wrap">
-    <h2 class="primary--text">Exp</h2>
+  <v-card flat class="experience-wrap mt-5">
+    <h2 class="primary--text section-header">Experience</h2>
     <v-card v-for="(item, index) in experienceContents" :key="index" class="section-wrap" :class="{ 'mt-3': index > 0, 'mt-4': index === 0 }">
-      <v-card-text class="px-8 contents-wrap">
+      <v-card-text class="contents-wrap">
         <div class="d-flex flex-column justify-center info-wrap">
           <div>
             <a :href="item.companyLink" target="_blank" class="company-link">{{ item.name }}</a>
           </div>
-          <p class="mt-2">{{ item.role }}</p>
+          <p class="mt-2">
+            <strong>{{ item.role }}</strong>
+          </p>
           <p>{{ item.date }}</p>
         </div>
         <ul class="work-list flex-grow-1 d-flex flex-column justify-center">

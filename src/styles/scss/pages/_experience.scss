@@ -6,6 +6,7 @@
     font-weight: 600;
   }
   .contents-wrap {
+    padding: 16px 32px;
     display: flex;
     .info-wrap {
       width: 30%;
@@ -24,8 +25,12 @@
     }
     .contents-wrap {
       display: block;
+      padding: 16px 24px;
       .info-wrap {
         width: 100%;
+        & > div {
+          max-width: 180px;
+        }
       }
       .work-list {
         margin-top: 16px;
