@@ -1,10 +1,12 @@
 <template>
   <v-card flat class="experience-wrap">
     <h2 class="primary--text">Exp</h2>
-    <v-card v-for="(item, index) in experienceContents" :key="index" :class="{ 'mt-3': index > 0, 'mt-4': index === 0 }">
+    <v-card v-for="(item, index) in experienceContents" :key="index" class="section-wrap" :class="{ 'mt-3': index > 0, 'mt-4': index === 0 }">
       <v-card-text class="px-8 contents-wrap">
         <div class="d-flex flex-column justify-center info-wrap">
-          <h3>{{ item.name }}</h3>
+          <div>
+            <a :href="item.companyLink" target="_blank" class="company-link">{{ item.name }}</a>
+          </div>
           <p class="mt-2">{{ item.role }}</p>
           <p>{{ item.date }}</p>
         </div>
@@ -15,7 +17,7 @@
           </li>
         </ul>
       </v-card-text>
-      <v-card-actions class="d-flex justify-center">
+      <v-card-actions class="d-flex justify-center button-wrap">
         <v-btn elevation="0" width="100%" color="transparent" class="primary--text" @click="openModal(item.modalContents)">More Details</v-btn>
       </v-card-actions>
     </v-card>
@@ -29,7 +31,7 @@ export default {
     experienceContents: [
       {
         name: '카이아이 컴퍼니',
-        link: '',
+        companyLink: 'https://www.kai-i.com/',
         role: 'Frontend Developer',
         date: '2021.06 ~ current',
         work: ['앱 웹뷰 구현 및 서비스 관리자 페이지 화면 구현 ', '기존 프로젝트 css에서 sass로 전환', '데이터 시각화를 위한 대시보드, 차트 기능 구현'],
@@ -49,7 +51,7 @@ export default {
       },
       {
         name: '칸타코리아',
-        link: '',
+        companyLink: 'http://www.kantar.co.kr/',
         role: 'Survey Programmer (CAWI)',
         date: '2018.09 ~ 2020.09',
         work: ['IBM Dimension Platform을 이용한 온라인 설문조사(CAWI) 구현 및 진행', '한국조사에 맞춘 UI 컴포넌트 개발', '프로젝트 코드 입력시 테스트 및 실제 조사 URL 생성 페이지 개발'],
@@ -62,17 +64,17 @@ export default {
             },
             {
               subTitle: '# Skill',
-              contents: ['Javascript', 'JQuery', 'Css', 'XHTML', 'Vue'],
+              contents: ['Javascript', 'JQuery', 'Css', 'HTML', 'Vue'],
             },
           ],
         },
       },
       {
         name: 'NTech Service (NHN Technology Service)',
-        link: '',
+        companyLink: 'https://www.nts-corp.com/',
         role: '인턴',
-        date: '2018.02 ~ 2018.02',
-        work: ['UI개발팀 인턴으로 웹 교육과 매일 과제 수행', '디자인(psd 파일) 기반으로 웹 페이지 구현', '프로필 이미지의 이상적인 사진 크기는 400픽셀x400픽셀입니다.'],
+        date: '2018.01 ~ 2018.02',
+        work: ['UI개발팀 인턴으로 웹 교육과 매일 과제 수행', '디자인(psd 파일) 기반으로 웹 페이지 구현'],
         modalContents: {
           title: 'NTech Service(NHN Technology Service)',
           sections: [

@@ -10,8 +10,11 @@
       <v-card-text>
         <div class="text-container mt-4" v-for="(section, index) in data.sections" :key="index">
           <h3 class="primary--text">{{ section.subTitle }}</h3>
-          <ul class="work-list flex-grow-1 pl-2">
-            <li v-for="(line, i) in section.contents" :key="i" :class="{ 'mt-2': i > 0, 'mt-4': i === 0 }">
+          <div v-if="section.subTitle === '# Skill'" class="skill-list d-flex flex-wrap mt-4">
+            <SkillChip v-for="(item, i) in section.contents" :key="i" :name="item" />
+          </div>
+          <ul v-else class="work-list flex-grow-1 pl-2 mt-4">
+            <li v-for="(line, i) in section.contents" :key="i" :class="{ 'mt-4': i === 0 }">
               <v-icon class="mr-2">mdi-pencil-outline</v-icon>
               {{ line }}
             </li>
@@ -23,8 +26,10 @@
 </template>
 
 <script>
+import SkillChip from '@/components/common/SkillChip';
 export default {
   name: 'DetailModal',
+  components: { SkillChip },
   props: {
     value: Boolean,
     data: {

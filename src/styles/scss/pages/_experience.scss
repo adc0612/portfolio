@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 .experience-wrap {
-  h2 {
+  & > h2 {
     font-size: 28px;
     font-weight: 600;
   }
@@ -9,13 +9,19 @@
     display: flex;
     .info-wrap {
       width: 30%;
-      h3 {
+      .company-link {
         font-size: 16px;
         font-weight: 600;
       }
     }
+    .work-list {
+      margin-left: 20px;
+    }
   }
   @include mobile {
+    .section-wrap {
+      position: relative;
+    }
     .contents-wrap {
       display: block;
       .info-wrap {
@@ -23,7 +29,13 @@
       }
       .work-list {
         margin-top: 16px;
+        margin-left: 0;
       }
+    }
+    .button-wrap {
+      position: absolute;
+      right: 0;
+      top: 0;
     }
   }
 }
