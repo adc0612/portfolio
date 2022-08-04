@@ -7,13 +7,16 @@
       @include text-ellipsis();
     }
   }
-  .text-container {
-    & > h3 {
-      font-size: 16px;
-      font-weight: 600;
-    }
-    .skill-list {
-      gap: 10px;
+  .text-wrap {
+    max-height: 700px;
+    .text-container {
+      & > h3 {
+        font-size: 16px;
+        font-weight: 600;
+      }
+      .skill-list {
+        gap: 10px;
+      }
     }
   }
 }

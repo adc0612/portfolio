@@ -4,9 +4,8 @@
     <v-card v-for="(item, index) in projectContents" :key="index" :class="{ 'mt-3': index > 0, 'mt-4': index === 0 }">
       <v-card-text class="contents-wrap">
         <h3 class="primary--text">
-          {{ item.platformName }}
-          <br />
-          {{ item.name }}
+          <span>{{ item.platformName }}</span>
+          <span>{{ item.name }}</span>
         </h3>
         <div>
           <h4>
@@ -75,7 +74,7 @@ export default {
       {
         platformName: '구강통합관리 플랫폼:',
         name: '덴티아이(Denti-i) 2022',
-        introduction: '건강한 구강을 위해 검진부터 예방까지 학교, 보건소, 병원이 효율적으로 관리할 수 있는 통합관리 플랫폼',
+        introduction: '건강한 구강을 위해 검진부터 예방까지 학교, 보건소, 병원이 효율적으로 관리할 수 있는 통합관리 플랫폼',
         skills: ['Vue', 'Javascript', 'Vuex', 'Sass'],
         dates: ['2022.03 ~ 2022.04 (기관용 웹 페이지 마이그레이션)', '2022.06 ~ 2022.06 (웹뷰 프론트엔드 개발)'],
         modalContents: {

@@ -1,5 +1,5 @@
 <template>
-  <v-dialog v-model="show" max-width="500" transition="dialog-bottom-transition" overlay-color="rgba(0,0,0,0.7)" overlay-opacity="1">
+  <v-dialog v-model="show" scrollable max-width="500" transition="dialog-bottom-transition" overlay-color="rgba(0,0,0,0.7)" overlay-opacity="1">
     <v-card tile class="modal-wrap">
       <v-card-title class="d-flex justify-space-between flex-nowrap title-wrap">
         <p>{{ data.title }}</p>
@@ -7,7 +7,7 @@
           <v-icon color="primary" size="28">mdi-close</v-icon>
         </v-btn>
       </v-card-title>
-      <v-card-text>
+      <v-card-text class="text-wrap">
         <div v-if="data.imageName" class="mt-4">
           <v-img :alt="`${data.imageName} project image`" :src="require(`@/assets/image/${data.imageName}`)" contain max-height="500px" />
         </div>

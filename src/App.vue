@@ -3,7 +3,7 @@
     <AppBar @handleDrawer="handleDrawer" />
     <NavMenu :show="drawerStatus" />
     <v-main>
-      <v-container>
+      <v-container class="py-5">
         <IntroPage />
         <ExperiencePage @openModal="openModal" />
         <ProjectPage @openModal="openModal" />

@@ -1,9 +1,9 @@
 <template>
-  <v-card flat class="intro-wrap mt-2">
+  <v-card flat class="intro-wrap">
     <h2 class="primary--text section-header">Introduce</h2>
     <div class="intro-container mt-3">
       <div class="profile-wrap">
-        <v-avatar size="200" class="rounded-lg">
+        <v-avatar size="200" rounded="lg">
           <v-img alt="profile image" :src="require('@/assets/image/profile.jpeg')" />
         </v-avatar>
       </div>
@@ -26,7 +26,7 @@
           <strong class="primary--text">UI 개발팀 인턴</strong>
           과
           <strong class="primary--text">survey programmer</strong>
-          경력과 인도에서 학창시절을 다닌 다양한 경험을 가지고있습니다.
+          경력과 인도에서 학창시절을 보낸 다양한 경험을 가지고있습니다.
         </p>
         <p class="mt-3">글 솜씨는 좋지 않지만 얻은 정보들을 공유하고 기억하기 위해 개인 블로그에 포스트를 작성하려 노력하고 있습니다.</p>
       </div>
