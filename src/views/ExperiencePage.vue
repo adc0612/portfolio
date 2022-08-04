@@ -56,7 +56,11 @@ export default {
         companyLink: 'http://www.kantar.co.kr/',
         role: 'Survey Programmer (CAWI)',
         date: '2018.09 ~ 2020.09',
-        work: ['IBM Dimension Platform을 이용한 온라인 설문조사(CAWI) 구현 및 진행', '한국조사에 맞춘 UI 컴포넌트 개발', '프로젝트 코드 입력시 테스트 및 실제 조사 URL 생성 페이지 개발'],
+        work: [
+          'IBM Dimension Platform을 이용한 온라인 설문조사(CAWI) 구현 및 진행',
+          '한국 설문조사에 자주 사용되는 UI 컴포넌트와 라이브러리 개발',
+          '프로젝트 코드 입력시 테스트 및 실제 조사 URL 생성 페이지 개발',
+        ],
         modalContents: {
           title: '칸타코리아',
           sections: [

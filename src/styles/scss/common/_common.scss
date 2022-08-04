@@ -1,6 +1,19 @@
 @charset "UTF-8";
 
+.app-bar-title {
+  font-size: 28px;
+  font-weight: 600;
+}
 .section-header {
   font-size: 28px;
   font-weight: 600;
+}
+.v-timeline {
+  padding-top: 12px;
+}
+.v-timeline-item {
+  padding-bottom: 0;
+}
+.v-timeline-item__opposite {
+  flex-shrink: 0;
 }

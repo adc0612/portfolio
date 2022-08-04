@@ -18,7 +18,7 @@
           </div>
           <ul v-else class="work-list flex-grow-1 pl-2 mt-4">
             <li v-for="(line, i) in section.contents" :key="i" class="d-flex align-start" :class="{ 'mt-4': i === 0 }">
-              <v-icon class="mr-2">mdi-pencil-outline</v-icon>
+              <v-icon class="mr-2">mdi-fire</v-icon>
               {{ line }}
             </li>
           </ul>

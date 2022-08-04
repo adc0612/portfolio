@@ -12,6 +12,13 @@
       @include word-break-wrap();
     }
   }
+  .skill-list-wrap {
+    display: flex;
+    align-items: center;
+    .skill-list {
+      margin-left: 12px;
+    }
+  }
   .sub-category-title {
     font-size: 16px;
     font-weight: 600;
@@ -20,8 +27,15 @@
     gap: 8px;
   }
   @include mobile {
-    .contents-wrap .skill-name {
+    .skill-name {
       width: 90px;
+    }
+    .skill-list-wrap {
+      display: block;
+      .skill-list {
+        margin-top: 8px;
+        margin-left: 0;
+      }
     }
   }
 }

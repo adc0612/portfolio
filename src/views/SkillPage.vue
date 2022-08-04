@@ -17,9 +17,9 @@
       </v-card-text>
     </v-card>
     <div class="mt-4">
-      <div v-for="(content, index) in skillContents" :key="index" class="d-flex align-center">
-        <p class="sub-category-title">{{ `${content.title}: ` }}</p>
-        <div class="skill-list d-flex flex-wrap ml-3" :class="{ 'mt-3': index > 0 }">
+      <div v-for="(content, index) in skillContents" :key="index" class="skill-list-wrap" :class="{ 'mt-3': index > 0 }">
+        <p class="flex-shrink-0 sub-category-title">{{ `${content.title}: ` }}</p>
+        <div class="skill-list d-flex flex-wrap">
           <SkillChip v-for="skill in content.skills" :key="skill" :name="skill" />
         </div>
       </div>

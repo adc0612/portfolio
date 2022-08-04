@@ -8,6 +8,8 @@
         <ExperiencePage @openModal="openModal" />
         <ProjectPage @openModal="openModal" />
         <SkillPage />
+        <AwardPage />
+        <BlogPage />
       </v-container>
     </v-main>
     <DetailModal v-if="showModal" v-model="showModal" :data="modalData" @close="showModal = false" />
@@ -22,10 +24,14 @@ import ExperiencePage from './views/ExperiencePage.vue';
 import DetailModal from '@/components/common/DetailModal';
 import ProjectPage from '@/views/ProjectPage';
 import SkillPage from '@/views/SkillPage';
+import AwardPage from '@/views/AwardPage';
+import BlogPage from '@/views/BlogPage';
 export default {
   name: 'App',
 
   components: {
+    BlogPage,
+    AwardPage,
     SkillPage,
     ProjectPage,
     DetailModal,
