@@ -7,6 +7,7 @@
         <IntroPage />
         <ExperiencePage @openModal="openModal" />
         <ProjectPage @openModal="openModal" />
+        <SkillPage />
       </v-container>
     </v-main>
     <DetailModal v-if="showModal" v-model="showModal" :data="modalData" @close="showModal = false" />
@@ -20,10 +21,12 @@ import IntroPage from './views/IntroPage.vue';
 import ExperiencePage from './views/ExperiencePage.vue';
 import DetailModal from '@/components/common/DetailModal';
 import ProjectPage from '@/views/ProjectPage';
+import SkillPage from '@/views/SkillPage';
 export default {
   name: 'App',
 
   components: {
+    SkillPage,
     ProjectPage,
     DetailModal,
     AppBar,

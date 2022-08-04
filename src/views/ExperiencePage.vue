@@ -13,7 +13,7 @@
           <p>{{ item.date }}</p>
         </div>
         <ul class="work-list flex-grow-1 d-flex flex-column justify-center">
-          <li v-for="(line, i) in item.work" :key="i" class="d-flex" :class="{ 'mt-2': i > 0 }">
+          <li v-for="(line, i) in item.work" :key="i" class="d-flex align-start" :class="{ 'mt-2': i > 0 }">
             <v-icon class="mr-2">mdi-briefcase-outline</v-icon>
             {{ line }}
           </li>
@@ -86,7 +86,7 @@ export default {
             },
             {
               subTitle: '# Skill',
-              contents: ['Javascript', 'CSS', 'HTML'],
+              contents: ['Javascript', 'CSS', 'HTML', 'Sass', 'Gulp'],
             },
           ],
         },

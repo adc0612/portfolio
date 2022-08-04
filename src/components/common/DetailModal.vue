@@ -3,7 +3,7 @@
     <v-card tile class="modal-wrap">
       <v-card-title class="d-flex justify-space-between flex-nowrap title-wrap">
         <p>{{ data.title }}</p>
-        <v-btn width="48" height="48" icon @click="$emit('close')">
+        <v-btn width="36" height="36" icon @click="$emit('close')">
           <v-icon color="primary" size="28">mdi-close</v-icon>
         </v-btn>
       </v-card-title>
