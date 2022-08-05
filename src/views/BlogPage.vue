@@ -1,5 +1,5 @@
 <template>
-  <v-card flat class="blog-wrap mt-5">
+  <v-card flat id="blog" class="blog-wrap mt-5">
     <h2 class="primary--text section-header">Blog</h2>
     <v-card class="mt-3 py-4 px-8">
       <v-list-item two-line v-for="(content, index) in blogContents" :key="index">

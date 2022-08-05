@@ -1,5 +1,5 @@
 <template>
-  <v-card flat class="project-wrap mt-5">
+  <v-card flat id="project" class="project-wrap mt-5">
     <h2 class="primary--text section-header">Project</h2>
     <v-card v-for="(item, index) in projectContents" :key="index" :class="{ 'mt-3': index > 0, 'mt-4': index === 0 }">
       <v-card-text class="contents-wrap">

@@ -1,5 +1,5 @@
 <template>
-  <v-card flat class="award-wrap mt-5">
+  <v-card flat id="award" class="award-wrap mt-5">
     <h2 class="primary--text section-header">Award</h2>
     <v-card class="py-5 mt-3">
       <v-timeline align-top>

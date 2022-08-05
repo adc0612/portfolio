@@ -1,7 +1,6 @@
 <template>
   <v-app>
-    <AppBar @handleDrawer="handleDrawer" />
-    <NavMenu :show="drawerStatus" />
+    <AppBar />
     <v-main>
       <v-container class="py-5">
         <IntroPage />
@@ -18,7 +17,6 @@
 
 <script>
 import AppBar from '@/components/layout/AppBar.vue';
-import NavMenu from './components/layout/NavMenu.vue';
 import IntroPage from './views/IntroPage.vue';
 import ExperiencePage from './views/ExperiencePage.vue';
 import DetailModal from '@/components/common/DetailModal';
@@ -36,20 +34,15 @@ export default {
     ProjectPage,
     DetailModal,
     AppBar,
-    NavMenu,
     IntroPage,
     ExperiencePage,
   },
 
   data: () => ({
-    drawerStatus: false,
     showModal: false,
     modalData: {},
   }),
   methods: {
-    handleDrawer() {
-      this.drawerStatus = !this.drawerStatus;
-    },
     openModal(contents) {
       this.showModal = true;
       this.modalData = contents;

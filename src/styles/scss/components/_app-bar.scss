@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+.app-bar-wrap {
+  .app-bar-title {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .navigation-menu-wrap {
+    display: flex;
+  }
+  .drawer-trigger-btn {
+    display: none;
+  }
+  @include mobile {
+    .navigation-menu-wrap {
+      display: none;
+    }
+    .drawer-trigger-btn {
+      display: block;
+    }
+  }
+}
