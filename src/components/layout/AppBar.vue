@@ -1,12 +1,14 @@
 <template>
-  <v-app-bar app color="primary" class="app-bar-wrap" dark>
+  <v-app-bar app :color="$vuetify.theme.dark ? 'black' : 'primary'" class="d-flex justify-space-between app-bar-wrap" width="100%" dark>
     <div class="d-flex align-center">
       <h1 class="app-bar-title">
         <a class="white--text" @click="scrollToTop">DOHU JEON</a>
       </h1>
     </div>
-    <div class="navigation-menu-wrap ml-10">
-      <v-btn v-for="(section, index) in sectionList" :key="index" plain class="white--text" :lass="{ 'ml-3': index > 0 }" @click="scrollToSection(section)">{{ section }}</v-btn>
+    <v-spacer></v-spacer>
+
+    <div class="navigation-menu-wrap">
+      <v-btn v-for="(section, index) in sectionList" :key="index" plain class="white--text" @click="scrollToSection(section)">{{ section }}</v-btn>
     </div>
     <v-spacer></v-spacer>
     <v-menu offset-y>
@@ -21,6 +23,10 @@
         </v-list-item>
       </v-list>
     </v-menu>
+    <v-btn icon @click="switchTheme">
+      <v-icon v-if="$vuetify.theme.dark">mdi-weather-night</v-icon>
+      <v-icon v-else>mdi-weather-sunny</v-icon>
+    </v-btn>
   </v-app-bar>
 </template>
 
@@ -31,9 +37,6 @@ export default {
     sectionList: ['Intro', 'Experience', 'Project', 'Skill', 'Award', 'Blog'],
   }),
   methods: {
-    handleDrawer() {
-      this.$emit('handleDrawer');
-    },
     scrollToTop() {
       window.scrollTo(0, 0);
     },
@@ -42,6 +45,9 @@ export default {
         block: 'center',
         behavior: 'smooth',
       });
+    },
+    switchTheme() {
+      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
     },
   },
 };

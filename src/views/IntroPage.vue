@@ -1,5 +1,5 @@
 <template>
-  <v-card flat id="intro" class="intro-wrap">
+  <v-card id="intro" color="transparent" flat class="intro-wrap">
     <h2 class="primary--text section-header">Introduce</h2>
     <div class="intro-container mt-3">
       <div class="profile-wrap">

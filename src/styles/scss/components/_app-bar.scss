@@ -1,6 +1,9 @@
 @charset "UTF-8";
 
 .app-bar-wrap {
+  .v-toolbar__content {
+    width: 100%;
+  }
   .app-bar-title {
     font-size: 24px;
     font-weight: 600;
@@ -12,6 +15,14 @@
     display: none;
   }
   @include mobile {
+    .navigation-menu-wrap {
+      display: none;
+    }
+    .drawer-trigger-btn {
+      display: block;
+    }
+  }
+  @include tablet {
     .navigation-menu-wrap {
       display: none;
     }

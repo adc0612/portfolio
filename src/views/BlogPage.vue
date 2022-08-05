@@ -1,8 +1,8 @@
 <template>
-  <v-card flat id="blog" class="blog-wrap mt-5">
+  <v-card id="blog" color="transparent" flat class="blog-wrap mt-5">
     <h2 class="primary--text section-header">Blog</h2>
     <v-card class="mt-3 py-4 px-8">
-      <v-list-item two-line v-for="(content, index) in blogContents" :key="index">
+      <v-list-item v-for="(content, index) in blogContents" :key="index" two-line>
         <v-list-item-content>
           <v-list-item-title>
             <a :href="content.link" target="_blank" class="link">{{ content.name }}</a>

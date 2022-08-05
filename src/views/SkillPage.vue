@@ -1,5 +1,5 @@
 <template>
-  <v-card flat id="skill" class="skill-wrap mt-5">
+  <v-card id="skill" color="transparent" flat class="skill-wrap mt-5">
     <h2 class="primary--text section-header">Skill</h2>
     <v-card v-for="(item, index) in primarySkillContents" :key="index" class="section-wrap" :class="{ 'mt-3': index > 0, 'mt-4': index === 0 }">
       <v-card-text class="d-flex align-center contents-wrap">
