@@ -11,7 +11,7 @@
         <div v-if="data.imageName" class="mt-4">
           <v-img :alt="`${data.imageName} project image`" :src="require(`@/assets/image/${data.imageName}`)" contain max-height="500px" />
         </div>
-        <div class="text-container mt-4" v-for="(section, index) in data.sections" :key="index">
+        <div v-for="(section, index) in data.sections" :key="index" class="text-container mt-4">
           <h3 class="primary--text">{{ section.subTitle }}</h3>
           <div v-if="section.subTitle === '# Skill'" class="skill-list d-flex flex-wrap mt-4">
             <SkillChip v-for="(skill, i) in section.contents" :key="i" :name="skill" />

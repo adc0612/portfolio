@@ -53,6 +53,10 @@ export default {
     ],
     skillContents: [
       {
+        title: 'State Management',
+        skills: ['Vuex', 'Jotai'],
+      },
+      {
         title: 'UI library',
         skills: ['Vuetify', 'StyledComponents'],
       },
