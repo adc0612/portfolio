@@ -1,0 +1,87 @@
+{
+  "contents": [
+    {
+      "name": "Kai-i Company",
+      "companyLink": "https://www.kai-i.com/",
+      "role": "Frontend Developer",
+      "date": "2021.06 ~ current",
+      "work": [
+        "WebView and webpage front-end development",
+        "Upgrade project CSS styles to SASS styles",
+        "Data visualization"
+      ],
+      "modalContents": {
+        "title": "Kai-i Company",
+        "sections": [
+          {
+            "subTitle": "# What I Learned",
+            "contents": [
+              "State Management using Vuex",
+              "UI development with Vuetify and SASS",
+              "Created reusable UI component",
+              "Collaboration with PM, Backend Developer, Designer"
+            ]
+          },
+          {
+            "subTitle": "# Skill",
+            "contents": ["Vue", "Vuex", "Vuetify", "Sass"]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Kantar Korea",
+      "companyLink": "http://www.kantar.co.kr/",
+      "role": "Survey Programmer (CAWI)",
+      "date": "2018.09 ~ 2020.09",
+      "work": [
+        "Online Survey(CAWI) development with IBM Dimension Platform",
+        "Created UI components and library for Korean online survey",
+        "Created survey URL generate webpage for actual and test surveys"
+      ],
+      "modalContents": {
+        "title": "Kantar Korea",
+        "sections": [
+          {
+            "subTitle": "# What I Learned",
+            "contents": [
+              "Experience in online survey development and conducting survey",
+              "Cross browsing",
+              "Communication skill from conducting project for almost 2years"
+            ]
+          },
+          {
+            "subTitle": "# Skill",
+            "contents": ["Javascript", "JQuery", "Css", "HTML", "Vue"]
+          }
+        ]
+      }
+    },
+    {
+      "name": "NTech Service (NHN Technology Service)",
+      "companyLink": "https://www.nts-corp.com/",
+      "role": "Intern",
+      "date": "2018.01 ~ 2018.02",
+      "work": [
+        "Experiences that adhere to web standards as an intern in web UI development Team",
+        "Develope a webpage with psd files"
+      ],
+      "modalContents": {
+        "title": "NTech Service(NHN Technology Service)",
+        "sections": [
+          {
+            "subTitle": "# What I Learned",
+            "contents": [
+              "Learned about web front-end skills like HTML, CSS, Javascript, Sass, Gulp, etc..",
+              "Focused on responsive web design, cross browsing, performance and accessible user experiences"
+            ]
+          },
+          {
+            "subTitle": "# Skill",
+            "contents": ["Javascript", "CSS", "HTML", "Sass", "Gulp"]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "contents": [
+    {
+      "name": "Velog",
+      "link": "https://velog.io/@adc0612",
+      "explanation": "Front-end skill and web knowledge blog"
+    },
+    {
+      "name": "Jekyll - Github Page",
+      "link": "https://adc0612.github.io/",
+      "explanation": "Front-end skill blog (Has moved to Velog recently)"
+    }
+  ]
+}

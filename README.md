@@ -20,9 +20,7 @@
 ## Support
 * Mobile, Tablet, PC
 * Dark mode
-
-## To Do
-* English Translation 
+* English Translation
 
 ## Skill Set
 * Javascript

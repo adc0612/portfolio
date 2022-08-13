@@ -23,6 +23,20 @@
         </v-list-item>
       </v-list>
     </v-menu>
+    <v-menu offset-y>
+      <template #activator="{ on, attrs }">
+        <v-btn icon v-bind="attrs" v-on="on">
+          <v-icon>mdi-translate</v-icon>
+        </v-btn>
+      </template>
+      <v-list>
+        <v-list-item v-for="(language, index) in languageList" :key="index">
+          <v-list-item-title>
+            <v-btn class="menu-btn" width="100%" plain @click="changeLanguage(language)">{{ language }}</v-btn>
+          </v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </v-menu>
     <v-btn icon @click="switchTheme">
       <v-icon v-if="$vuetify.theme.dark">mdi-weather-night</v-icon>
       <v-icon v-else>mdi-weather-sunny</v-icon>
@@ -35,6 +49,7 @@ export default {
   name: 'AppBar',
   data: () => ({
     sectionList: ['Intro', 'Experience', 'Project', 'Skill', 'Award', 'Blog'],
+    languageList: ['ko', 'en'],
   }),
   methods: {
     scrollToTop() {
@@ -48,6 +63,9 @@ export default {
     },
     switchTheme() {
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+    },
+    changeLanguage(value) {
+      this.$root.$i18n.locale = value;
     },
   },
 };
