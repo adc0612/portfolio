@@ -5,8 +5,8 @@
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#about-the-project">About the project</a></li>
+    <li><a href="#url">URL</a></li>
     <li><a href="#support">Support</a></li>
-    <li><a href="#todo">To do</a></li>
     <li><a href="#skill-set">Skill set</a></li>
     <li><a href="#license">License</a></li>
   </ol>
@@ -15,7 +15,11 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+PortFolio website made with Vue
 ![GIF](./src/assets/image/portfolio-demo.gif)
+
+## URL
+https://adc0612.github.io/portfolio/
 
 ## Support
 * Mobile, Tablet, PC
