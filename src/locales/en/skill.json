@@ -2,29 +2,22 @@
   "primaryContents": [
     {
       "name": "Javascript",
-      "text": [
-        "To make code reusable and easy to understand, try to develop with functional programming and Javascript ES6"
-      ]
+      "text": ["To make code reusable and easy to understand, try to develop with functional programming and Javascript ES6"]
     },
     {
       "name": "Typescript",
       "text": [
         "With TypeScript, can detect bugs at the compile stage and get more autocomplete which can lead to increase in development productivity and maintenance.",
-        "Planning to apply typescript with refactoring project with Vue3"
+        "Learning in progreess and planning to apply typescript with refactoring project with Vue3"
       ]
     },
     {
       "name": "Vue",
-      "text": [
-        "Using Vue2 as a main front-end framework in development",
-        "Using mixin and slots for reusable code and planning to apply composition api."
-      ]
+      "text": ["Using Vue2 as a main front-end framework in development", "Using mixin and slots for reusable code and planning to apply composition api."]
     },
     {
       "name": "React",
-      "text": [
-        "Learning through personal projects and Internet lectures, and going to apply small projects first."
-      ]
+      "text": ["Learning through personal projects and Internet lectures, and going to apply small projects first."]
     }
   ],
   "subContents": [
