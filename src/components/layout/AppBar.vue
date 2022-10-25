@@ -37,6 +37,9 @@
         </v-list-item>
       </v-list>
     </v-menu>
+    <v-btn icon href="https://github.com/adc0612" target="_blank">
+      <v-icon>mdi-github</v-icon>
+    </v-btn>
     <v-btn icon @click="switchTheme">
       <v-icon v-if="$vuetify.theme.dark">mdi-weather-night</v-icon>
       <v-icon v-else>mdi-weather-sunny</v-icon>
