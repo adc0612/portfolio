@@ -1,37 +1,16 @@
 {
-  "primaryContents": [
+  "contents": [
     {
-      "name": "Javascript",
-      "text": ["ES6 문법을 사용하며 코드의 재사용성과 쉽게 이해 할 수 있도록 함수형 프로그래밍을 지향하며 개발하도록 노력하고 있습니다."]
+      "title": "Frontend",
+      "skills": ["React", "Typescript", "Svelte", "JavaScript", "Vue"]
     },
-    {
-      "name": "Typescript",
-      "text": [
-        "코드 단에서 오류 검사와 코드 자동완성의 장점을 가지고 있으므로, 프로젝트 개발 생산성과 유지보수에 이점이 있습니다.",
-        "공부를 하는 중이며 추후 Vue3로 리팩토링과 함께 적용할 예정입니다."
-      ]
-    },
-    {
-      "name": "Vue",
-      "text": ["Vue2를 기반으로 전반적인 프로젝트에 사용중입니다. ", "코드 재사용성을 위해 mixin과 slot을 사용 중이며, composition api도 적용 할 예정입니다."]
-    },
-    {
-      "name": "React",
-      "text": ["개인 프로젝트와 인터넷 강의를 통해 배우는 중이며 소규모 프로젝트부터 적용해 볼 예정입니다."]
-    }
-  ],
-  "subContents": [
     {
       "title": "State Management",
-      "skills": ["Vuex", "Jotai"]
+      "skills": ["Mobx", "Vuex"]
     },
     {
       "title": "UI library",
-      "skills": ["Vuetify", "StyledComponents", "MUI"]
-    },
-    {
-      "title": "Collaboration",
-      "skills": ["Bitbucket", "Jira", "Zeplin", "Figma", "Notion", "Slack"]
+      "skills": ["MUI", "Emotion", "Vuetify", "StyledComponents"]
     },
     {
       "title": "Language",

@@ -4,11 +4,6 @@
       "name": "Velog",
       "link": "https://velog.io/@adc0612",
       "explanation": "프론트엔드 실무 프로젝트 및 공부 지식 블로그"
-    },
-    {
-      "name": "Jekyll - Github Page",
-      "link": "https://adc0612.github.io/",
-      "explanation": "프론트엔드 공부 지식 블로그 (Velog로 옮겨서 작성중이라 최신글이 없다.)"
     }
   ]
 }

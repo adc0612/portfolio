@@ -1,120 +1,86 @@
 {
   "section": {
-    "title": "Intro",
-    "date": "Period",
-    "skill": "Skills",
+    "title": "Project Introduction",
+    "date": "Development Period",
+    "skill": "Technologies Used",
+    "problem": "Challenges & Solutions",
     "button": "More Details..."
   },
   "contents": [
     {
-      "platformName": "Dementia Management Platform:",
-      "name": "Menti-Silver Plus",
-      "introduction": "Dementia prevention DB management system using ARS technology and voice recognition technology customized for seniors",
-      "skills": [
-        "Vue",
-        "Javascript",
-        "Vuex",
-        "Vuetify",
-        "Sass",
-        "ChartJS",
-        "HTML",
-        "CSS"
+      "name": "Inference Service Page Development",
+      "introduction": ["The Inference Service page was developed as a full-featured interface for deploying, managing, and monitoring machine learning models.", "My primary tasks included visualizing data for users to quickly assess deployed model performance and designing the deployment process."],
+      "goal": "Simplify model deployment process, optimize real-time data monitoring, and enhance UX.",
+      "skills": ["React", "Typescript", "React-query", "react-hook-form", "Echarts"],
+      "dates": ["2023.01 ~ 2024.12"],
+      "sections": [
+        {
+          "problem": "Code redundancy and maintenance challenges due to complex nested form structures.",
+          "contents": ["Simplified code by splitting forms into sections using useFormContext.", "Developed a custom hook to automatically generate and manage nested field paths in useFormContext."],
+          "effect": ["Reduced redundant code by 40%, lowered maintenance costs, and improved form addition speed by 30%."]
+        },
+        {
+          "problem": "Inference Service list API response delays.",
+          "contents": ["Combined React Router's loader with React Query's queryClient to prefetch data before page entry."],
+          "effect": ["Reduced initial loading time by 30-40%, improving UX."]
+        }
       ],
-      "dates": [
-        "2022.01 ~ 2022.01 (Mobile web for ARS mobile survyey)",
-        "2022.07 ~ current (Webpage for dementia patients management)"
-      ],
-      "modalContents": {
-        "title": "Menti-Silver Plus",
-        "imageName": "menti-silver-plus.gif",
-        "sections": [
-          {
-            "subTitle": "# Objectives",
-            "contents": [
-              "Provide self-examination of dementia regardless of time and place where visiting examinations have become difficult due to COVID-19",
-              "Find a risk factor, provide sustained practical action preventing dementia and cognitive training program with dementia risk reduction targets."
-            ]
-          },
-          {
-            "subTitle": "# Contribution",
-            "contents": [
-              "Developed mobile webpage for ARS KDSQ Test",
-              "Developed webpage for dementia center patient management",
-              "Data visualization with chart and table",
-              "Save signature using canvas"
-            ]
-          }
-        ]
-      }
+      "imageName": "inference-service.gif"
     },
     {
-      "platformName": "Dental Care Management Platform:",
-      "name": "Denti-i 2022",
-      "introduction": "A platform for dental care that can be efficiently managed by schools, health centers, and hospitals",
-      "skills": ["Vue", "Javascript", "Vuex", "Sass"],
-      "dates": [
-        "2022.03 ~ 2022.04 (Project migration from 2021 to 2022)",
-        "2022.06 ~ 2022.06 (WebView)"
+      "name": "Experiment Page Development & Enhancement",
+      "introduction": ["The Experiment page is designed to import models from MLflow and manage them within Runway."],
+      "goal": "Enhance data exploration and experiment management efficiency.",
+      "skills": ["React", "Typescript", "React-query", "ag-grid"],
+      "dates": ["2023.01 ~ 2024.06"],
+      "sections": [
+        {
+          "problem": "Existing experiment management UI table had limited functionality and lacked a user-friendly interface.",
+          "contents": ["Replaced the existing MUI Table with AG Grid."],
+          "effect": ["Added column movement, filtering, and sorting features using AG Grid.", "Improved UX for data exploration and made feature expansion easier."]
+        },
+        {
+          "problem": "Paging-based navigation made data exploration cumbersome.",
+          "contents": ["Implemented Infinite Scroll to optimize list browsing speed."],
+          "effect": ["Improved UX and optimized large dataset handling."]
+        }
       ],
-      "modalContents": {
-        "title": "Denti-i 2022",
-        "imageName": "denti-i.gif",
-        "sections": [
-          {
-            "subTitle": "# Objectives",
-            "contents": [
-              "A service that provides technical support to children who do not attend school so that they can receive free oral treatment at a dental medical institution designated by the local government."
-            ]
-          },
-          {
-            "subTitle": "# Contribution",
-            "contents": [
-              "WebView and web front-end development",
-              "Data visualization with chart and table",
-              "Showing a location of cavities with tooth image(svg)",
-              "Upgrade webpage CSS styles to SASS styles"
-            ]
-          }
-        ]
-      }
+      "imageName": "experiment.gif"
     },
     {
-      "platformName": "Army Dental Care Management Platform:",
-      "name": "Denti-ROKA",
-      "introduction": "Dental care platform for korean soldiers",
-      "skills": [
-        "Vue",
-        "Javascript",
-        "Vuex",
-        "Vuetify",
-        "Sass",
-        "chartJS",
-        "vuei18n"
+      "name": "AutoML Page Development",
+      "introduction": ["The AutoML page is a tabular interface for automatically optimizing machine learning models.", "Users can select models and save them as models or pipelines in Runway."],
+      "goal": "Accelerate MVP development speed and optimize lightweight interactions.",
+      "skills": ["Svelte"],
+      "dates": ["2024.09 ~ 2024.11"],
+      "sections": [
+        {
+          "problem": "Initial plan to use React UI resulted in excessive code and slowed development.",
+          "contents": ["Adopted Svelte to eliminate unnecessary code at the compile stage."],
+          "effect": ["Accelerated MVP development and reduced maintenance burden."]
+        },
+        {
+          "problem": "Required a rapid release.",
+          "contents": ["Minimized components and simplified state management."],
+          "effect": ["Enabled quick deployment of AutoML features."]
+        }
       ],
-      "dates": [
-        "2021.12 ~ 2022.01 (Webpage for user management)",
-        "2022.05 ~ 2022.05 (Applying Vietnamese translation)"
+      "imageName": "automl.gif"
+    },
+    {
+      "name": "Runway Notification Feature Addition",
+      "introduction": ["Implemented a notification feature for key events in Runway, such as model deployment success/failure, experiment results, and project user status updates."],
+      "goal": "Provide real-time notifications and enhance data exploration efficiency.",
+      "skills": ["React", "Typescript", "React-query"],
+      "dates": ["2024.10 ~ 2024.11"],
+      "sections": [
+        {
+          "problem": "Existing plan used a 'Load More' approach, leading to inefficient UX.",
+          "contents": ["Implemented Infinite Scroll to optimize scroll-based data loading."],
+          "effect": ["Improved notification data retrieval performance and enhanced UX."]
+        }
       ],
-      "modalContents": {
-        "title": "Denti-ROKA",
-        "imageName": "denti-roka.gif",
-        "sections": [
-          {
-            "subTitle": "# Objectives",
-            "contents": [
-              "Using a smartphone camera, check plaque through self-mouth imaging and provide oral education contents to manage the oral cavity of soldiers"
-            ]
-          },
-          {
-            "subTitle": "# Contribution",
-            "contents": [
-              "Developed admin webpages for user creation, management, and statistics",
-              "Created statistic with tooth images, chart, table",
-              "Applied english and vietnamese translation with vue-i18n"
-            ]
-          }
-        ]
-      }
+      "imageName": "notification.gif"
     }
   ]
 }

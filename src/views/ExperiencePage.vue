@@ -1,6 +1,6 @@
 <template>
   <v-card id="experience" flat color="transparent" class="experience-wrap mt-5">
-    <h2 class="primary--text section-header">Experience</h2>
+    <h2 class="primary--text section-header">Experience.</h2>
     <v-card v-for="(item, index) in $t('experience.contents')" :key="index" class="section-wrap" :class="{ 'mt-3': index > 0, 'mt-4': index === 0 }">
       <v-card-text class="contents-wrap">
         <div class="d-flex flex-column justify-center info-wrap">

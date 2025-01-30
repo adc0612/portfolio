@@ -51,7 +51,7 @@
 export default {
   name: 'AppBar',
   data: () => ({
-    sectionList: ['Intro', 'Experience', 'Project', 'Skill', 'Award', 'Blog'],
+    sectionList: ['Intro', 'Project', 'Skill', 'Award', 'Blog', 'Exercise'],
     languageList: ['ko', 'en'],
   }),
   methods: {

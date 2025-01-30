@@ -1,18 +1,15 @@
 {
-  "p1": {
-    "text": "Hi, I'm {strong1} from Seoul, Korea",
+  "title": {
+    "text": "Hello, I am {strong1}, a frontend developer.",
     "strong1": "Dohu"
   },
-  "p2": {
-    "text": "Currently, I work at startup in Korea as a {strong1}.{break}I'm working on Admin webpages(data visualization, user management, etc..) and WebView in app with focus on fast, elegant and accessible user experiences",
-    "strong1": "Front-end Developer"
-  },
-  "p3": {
-    "text": "Before now, I was {strong2} in Kanter, where I work on online survey(CAWI) with IBM Dimension Platform.{break} Prior to Kantar, I was an {strong1} where I learned about web, Ui, UX knowledge .",
-    "strong1": "intern in UI Development Team",
-    "strong2": "survey programmer"
-  },
-  "p4": {
-    "text": "I'm not quite good at writing articles but trying to post articles about front-end skills and other web knowledge."
-  }
+  "intro": "👋 This is the kind of developer I am.",
+  "contents": [
+    "I strive to write clean code that is easy to understand and naturally extendable.",
+    "I enjoy collaborating with backend developers and designers through frequent communication.",
+    "I focus on reducing unnecessary code and improving processes to make development easier for the team.",
+    "I document and share challenges encountered during solo or team development.",
+    "I grow through code reviews and always listen to better approaches with an open mind.",
+    "I maintain my physical health with regular exercise to stay in top condition for development."
+  ]
 }

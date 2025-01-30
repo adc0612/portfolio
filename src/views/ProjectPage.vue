@@ -1,19 +1,21 @@
 <template>
   <v-card id="project" color="transparent" flat class="project-wrap mt-5">
-    <h2 class="primary--text section-header">Project</h2>
+    <h2 class="primary--text section-header">Project.</h2>
     <v-card v-for="(item, index) in $t('project.contents')" :key="index" :class="{ 'mt-3': index > 0, 'mt-4': index === 0 }">
       <v-card-text class="contents-wrap">
         <h3 class="primary--text">
-          <span>{{ item.platformName }}</span>
+          <span>{{ item?.platformName }}</span>
           <span>{{ item.name }}</span>
         </h3>
+
         <div>
           <h4>
             <v-icon left>mdi-information-outline</v-icon>
             {{ $t('project.section.title') }}
           </h4>
-          <p class="pl-9 mt-2">{{ item.introduction }}</p>
+          <p v-for="(line, i) in item.introduction" :key="`introduction-${i}`" class="pl-9 mt-2">{{ line }}</p>
         </div>
+
         <div>
           <h4>
             <v-icon left>mdi-calendar-edit</v-icon>
@@ -23,6 +25,38 @@
             {{ date }}
           </p>
         </div>
+
+        <div>
+          <h4>
+            <v-icon left>mdi-fire</v-icon>
+            {{ $t('project.section.problem') }}
+          </h4>
+          <div v-for="(section, idx) in item.sections" :key="idx" class="text-container mt-4 ml-9">
+            <h5 class="primary--text">
+              <v-icon class="mr-2">mdi-alert-box-outline</v-icon>
+              <strong>{{ section.problem }}</strong>
+            </h5>
+            <div class="mt-2 ml-9">
+              <h5><strong>개선 사항</strong></h5>
+              <ul class="work-list flex-grow-1 pl-2">
+                <li v-for="(line, i) in section.contents" :key="i" class="d-flex align-start">
+                  <v-icon class="mr-2">mdi-circle-small</v-icon>
+                  {{ line }}
+                </li>
+              </ul>
+            </div>
+            <div class="mt-1 ml-9">
+              <h5><strong>성과</strong></h5>
+              <ul class="work-list flex-grow-1 pl-2">
+                <li v-for="(line, i) in section.effect" :key="i" class="d-flex align-start">
+                  <v-icon class="mr-2">mdi-circle-small</v-icon>
+                  {{ line }}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
         <div>
           <h4>
             <v-icon left>mdi-sword</v-icon>
@@ -33,9 +67,6 @@
           </div>
         </div>
       </v-card-text>
-      <v-card-actions class="d-flex justify-center button-wrap">
-        <v-btn elevation="0" width="100%" color="transparent" class="primary--text" @click="openModal(item.modalContents)">{{ $t('project.section.button') }}</v-btn>
-      </v-card-actions>
     </v-card>
   </v-card>
 </template>
@@ -45,11 +76,6 @@ import SkillChip from '@/components/common/SkillChip';
 export default {
   name: 'ProjectPage',
   components: { SkillChip },
-  methods: {
-    openModal(contents) {
-      this.$emit('openModal', contents);
-    },
-  },
 };
 </script>
 

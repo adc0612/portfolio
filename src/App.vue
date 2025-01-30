@@ -4,11 +4,12 @@
     <v-main>
       <v-container class="py-5">
         <IntroPage />
-        <ExperiencePage @openModal="openModal" />
+        <!-- <ExperiencePage @openModal="openModal" /> -->
         <ProjectPage @openModal="openModal" />
         <SkillPage />
         <AwardPage />
         <BlogPage />
+        <ExercisePage />
       </v-container>
     </v-main>
     <DetailModal v-if="showModal" v-model="showModal" :data="modalData" @close="showModal = false" />
@@ -18,12 +19,13 @@
 <script>
 import AppBar from '@/components/layout/AppBar.vue';
 import IntroPage from './views/IntroPage.vue';
-import ExperiencePage from './views/ExperiencePage.vue';
+// import ExperiencePage from './views/ExperiencePage.vue';
 import DetailModal from '@/components/common/DetailModal';
 import ProjectPage from '@/views/ProjectPage';
 import SkillPage from '@/views/SkillPage';
 import AwardPage from '@/views/AwardPage';
 import BlogPage from '@/views/BlogPage';
+import ExercisePage from '@/views/ExercisePage';
 export default {
   name: 'App',
   components: {
@@ -34,7 +36,8 @@ export default {
     DetailModal,
     AppBar,
     IntroPage,
-    ExperiencePage,
+    // ExperiencePage,
+    ExercisePage,
   },
   data: () => ({
     showModal: false,
