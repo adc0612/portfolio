@@ -1,83 +1,92 @@
 {
   "section": {
-    "title": "Project Introduction",
+    "title": "Project Overview",
     "date": "Development Period",
     "skill": "Technologies Used",
-    "problem": "Challenges & Solutions",
-    "button": "More Details..."
+    "problem": "Problem & Solution Process",
+    "button": "More Details...",
+    "blogLink": "View Blog Post"
   },
   "contents": [
     {
       "name": "Inference Service Page Development",
-      "introduction": ["The Inference Service page was developed as a full-featured interface for deploying, managing, and monitoring machine learning models.", "My primary tasks included visualizing data for users to quickly assess deployed model performance and designing the deployment process."],
-      "goal": "Simplify model deployment process, optimize real-time data monitoring, and enhance UX.",
+      "introduction": ["Developed a page for deploying and managing models such as MLFlow, AWS S3, and HuggingFace.", "Main tasks included visualizing model performance data and creating deployment processes to help users quickly assess deployed models."],
+      "goal": "Simplify model deployment process, optimize real-time data monitoring, and improve UX",
       "skills": ["React", "Typescript", "React-query", "react-hook-form", "Echarts"],
-      "dates": ["2023.01 ~ 2024.12"],
+      "dates": ["2023.01 ~ 2025.04"],
       "sections": [
         {
-          "problem": "Code redundancy and maintenance challenges due to complex nested form structures.",
-          "contents": ["Simplified code by splitting forms into sections using useFormContext.", "Developed a custom hook to automatically generate and manage nested field paths in useFormContext."],
-          "effect": ["Reduced redundant code by 40%, lowered maintenance costs, and improved form addition speed by 30%."]
+          "title": "Real-time Visualization of Complex Prometheus Metrics via ECharts",
+          "contents": ["Visualized Prometheus-based metrics (latency, request count, error rate, etc.) and handled complex interactions like chart sync, tooltip linking, and zooming functionality.", "Helped users intuitively identify issues, leading to improved operational efficiency."]
         },
         {
-          "problem": "Inference Service list API response delays.",
-          "contents": ["Combined React Router's loader with React Query's queryClient to prefetch data before page entry."],
-          "effect": ["Reduced initial loading time by 30-40%, improving UX."]
+          "title": "Structural Refactoring and Gradual Migration of Legacy Form Code",
+          "contents": ["The existing form components were limited in supporting various models, so I abstracted redundant form structures and modularized them using useFormContext.", "Successfully transitioned legacy forms without disrupting existing features."]
+        },
+        {
+          "title": "Abstracting Nested Form Structure: Developed useFormContextHelpers Custom Hook",
+          "contents": [
+            "Resolved repetitive path management issues when using useFormContext in nested forms.",
+            "Provided an interface to auto-construct subfield paths based on basePath.",
+            "Integrated features like watch, setValue, getValues, and error for consistent form control.",
+            "Improved consistency in accessing nested fields, reduced bug rate, and enhanced maintainability.",
+            "Significantly accelerated new feature development and gradually migrated existing logic."
+          ],
+          "link": "https://velog.io/@adc0612/react-hook-form-useFormContext-custom-hook-만들어-중첩된-폼-쉽게-관리하기"
         }
       ],
       "imageName": "inference-service.gif"
     },
     {
-      "name": "Experiment Page Development & Enhancement",
-      "introduction": ["The Experiment page is designed to import models from MLflow and manage them within Runway."],
-      "goal": "Enhance data exploration and experiment management efficiency.",
+      "name": "Experiment Page Development and Improvement",
+      "introduction": ["Developed a sophisticated experiment management UI to compare and manage ML experiment results and histories.", "Faced challenges balancing performance and usability in handling large datasets and complex table interactions."],
+      "goal": "Enhance data exploration and experiment management efficiency",
       "skills": ["React", "Typescript", "React-query", "ag-grid"],
       "dates": ["2023.01 ~ 2024.06"],
       "sections": [
         {
-          "problem": "Existing experiment management UI table had limited functionality and lacked a user-friendly interface.",
-          "contents": ["Replaced the existing MUI Table with AG Grid."],
-          "effect": ["Added column movement, filtering, and sorting features using AG Grid.", "Improved UX for data exploration and made feature expansion easier."]
+          "title": "Transition and Integration to AG Grid for Advanced Table UX",
+          "contents": ["Switched from MUI Table to AG Grid to meet client requirements (filtering, sorting, grouping, etc.).", "Customized AG Grid to maintain compatibility with existing table events and functions, minimizing migration overhead."]
         },
         {
-          "problem": "Paging-based navigation made data exploration cumbersome.",
-          "contents": ["Implemented Infinite Scroll to optimize list browsing speed."],
-          "effect": ["Improved UX and optimized large dataset handling."]
+          "title": "Designed Infinite Scroll Structure for Handling Large Data",
+          "contents": ["Initial implementation suffered from poor UX due to server latency → Switched to infinite scroll on the client side.", "Improved user response time and distributed server load."]
+        },
+        {
+          "title": "Custom Visualization Components for Experiment Results",
+          "contents": ["Implemented a custom file tree + code viewer UI in the browser based on user feedback.", "Shortened analysis time and improved efficiency of repeated experiments."]
+        },
+        {
+          "title": "Modularized Repetitive Table Logic into Utilities",
+          "contents": ["Converted commonly used logic like filtering/sorting into internal utility functions → Extended for reuse in other projects."]
         }
       ],
       "imageName": "experiment.gif"
     },
     {
       "name": "AutoML Page Development",
-      "introduction": ["The AutoML page is a tabular interface for automatically optimizing machine learning models.", "Users can select models and save them as models or pipelines in Runway."],
-      "goal": "Accelerate MVP development speed and optimize lightweight interactions.",
+      "introduction": ["A project to quickly build a lightweight AutoML result page.", "Focused on rapid prototyping and adopting new technologies to deliver stable outcomes in a short timeframe."],
+      "goal": "Accelerate MVP development and optimize performance for lightweight interactions",
       "skills": ["Svelte"],
       "dates": ["2024.09 ~ 2024.11"],
       "sections": [
         {
-          "problem": "Initial plan to use React UI resulted in excessive code and slowed development.",
-          "contents": ["Adopted Svelte to eliminate unnecessary code at the compile stage."],
-          "effect": ["Accelerated MVP development and reduced maintenance burden."]
-        },
-        {
-          "problem": "Required a rapid release.",
-          "contents": ["Minimized components and simplified state management."],
-          "effect": ["Enabled quick deployment of AutoML features."]
+          "title": "Introduced Svelte and Designed Architecture with Rendering Optimization in Mind",
+          "contents": ["Adopted Svelte for its superior responsiveness over React in environments requiring fast filtering/sorting.", "Designed component structure and state management from scratch to implement a lightweight UI."]
         }
       ],
       "imageName": "automl.gif"
     },
     {
       "name": "Runway Notification Feature Addition",
-      "introduction": ["Implemented a notification feature for key events in Runway, such as model deployment success/failure, experiment results, and project user status updates."],
-      "goal": "Provide real-time notifications and enhance data exploration efficiency.",
+      "introduction": ["Added real-time notification features for key events such as model deployment and pipeline execution."],
+      "goal": "Provide real-time notifications and improve data exploration efficiency",
       "skills": ["React", "Typescript", "React-query"],
       "dates": ["2024.10 ~ 2024.11"],
       "sections": [
         {
-          "problem": "Existing plan used a 'Load More' approach, leading to inefficient UX.",
-          "contents": ["Implemented Infinite Scroll to optimize scroll-based data loading."],
-          "effect": ["Improved notification data retrieval performance and enhanced UX."]
+          "title": "The initial plan used a 'Load More' approach → Resulted in poor UX",
+          "contents": ["Implemented Infinite Scroll → Optimized data loading via scroll.", "Improved UX by combining read status, event filtering, and infinite scroll instead of simple list display."]
         }
       ],
       "imageName": "notification.gif"

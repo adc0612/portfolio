@@ -34,10 +34,9 @@
           <div v-for="(section, idx) in item.sections" :key="idx" class="text-container mt-4 ml-9">
             <h5 class="primary--text">
               <v-icon class="mr-2">mdi-alert-box-outline</v-icon>
-              <strong>{{ section.problem }}</strong>
+              <strong>{{ section.title }}</strong>
             </h5>
             <div class="mt-2 ml-9">
-              <h5><strong>개선 사항</strong></h5>
               <ul class="work-list flex-grow-1 pl-2">
                 <li v-for="(line, i) in section.contents" :key="i" class="d-flex align-start">
                   <v-icon class="mr-2">mdi-circle-small</v-icon>
@@ -45,14 +44,12 @@
                 </li>
               </ul>
             </div>
-            <div class="mt-1 ml-9">
-              <h5><strong>성과</strong></h5>
-              <ul class="work-list flex-grow-1 pl-2">
-                <li v-for="(line, i) in section.effect" :key="i" class="d-flex align-start">
-                  <v-icon class="mr-2">mdi-circle-small</v-icon>
-                  {{ line }}
-                </li>
-              </ul>
+            <div v-if="section.link" class="mt-2 ml-9">
+              <a :href="section.link" target="_blank" class="primary--text text-decoration-none">
+                <v-icon left small>mdi-link-variant</v-icon>
+                <span class="text-caption">{{ $t('project.section.blogLink') }}</span>
+                <v-icon right x-small>mdi-open-in-new</v-icon>
+              </a>
             </div>
           </div>
         </div>
